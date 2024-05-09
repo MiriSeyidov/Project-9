@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+}
+
+nav {
+  background-color: rgb(75, 69, 0);
+  display: flex;
+  align-items: center;
+}
+
+a.margin_left {
+  margin-left: auto;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+
+  padding: 8px 12px;
+}
+
+a.first_logo img{
+  width: 120px;
+  margin-left: 60px;
+}
+
+a.hexagon {
+    padding: 8px 16px;
+    margin: 2px;
+    position: relative;
+    height: 15px;
+    
+    background-image: url( ExamFiles/images/hexagon-green.svg);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center center;
+    
+
+    i {
+        font-size: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+
+        
+
+    }
+}
+
+a.hexagon:hover {
+    background-image: url(ExamFiles/images/hexagon-white.svg);
+    color: green;
+}
+
+#margin_right  {
+
+ margin-right: 50px;
+}
+
+
+div.responsive_part {
+    margin-left: auto;
+}
+
+@media (max-width:1200px) {
+    #margin_right {
+        margin-right: 0;
+    }
+    a.first_logo img {
+        margin-left: 0;
+    }
+}
+
+@media  (max-width:990px) {
+    a.hexagon {
+        display: none;
+        
+    }
+    
+}
+
+@media (max-width:770px) {
+    div.responsive_part {
+        display: none;
+    }
+}
