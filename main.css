@@ -1,9 +1,11 @@
 body {
   margin: 0;
+  font-family: monospace;
+  font-size: 18px;
 }
 
 nav {
-  background-color: rgb(75, 69, 0);
+  background-color: rgb(3, 54, 68);
   display: flex;
   align-items: center;
 }
@@ -19,69 +21,193 @@ a {
   padding: 8px 12px;
 }
 
-a.first_logo img{
+a.first_logo img {
   width: 120px;
   margin-left: 60px;
 }
 
 a.hexagon {
-    padding: 8px 16px;
-    margin: 2px;
-    position: relative;
-    height: 15px;
-    
-    background-image: url( ExamFiles/images/hexagon-green.svg);
-    background-repeat: no-repeat;
-    background-size: 30px;
-    background-position: center center;
-    
+  padding: 8px 16px;
+  margin: 2px;
+  position: relative;
+  height: 15px;
 
-    i {
-        font-size: 15px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        translate: -50% -50%;
+  background-image: url(ExamFiles/images/hexagon-green.svg);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center center;
 
-        
-
-    }
+  i {
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  }
 }
 
 a.hexagon:hover {
-    background-image: url(ExamFiles/images/hexagon-white.svg);
-    color: green;
+  background-image: url(ExamFiles/images/hexagon-white.svg);
+  color: green;
 }
 
-#margin_right  {
-
- margin-right: 50px;
+#margin_right {
+  margin-right: 72px;
 }
-
 
 div.responsive_part {
-    margin-left: auto;
+  margin-left: auto;
 }
 
-@media (max-width:1200px) {
-    #margin_right {
-        margin-right: 0;
-    }
-    a.first_logo img {
-        margin-left: 0;
-    }
+a.dropdown {
+  font-size: 28px;
+  display: none;
 }
 
-@media  (max-width:990px) {
-    a.hexagon {
-        display: none;
-        
-    }
+div.main1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(ExamFiles/images/header-background.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  margin-bottom: 110px;
+
+  h1 {
+    font-size: 60px;
+    margin-bottom: 0;
+  }
+
+  a {
+    padding: 14px 32px;
+    background-color: rgb(54, 172, 127);
+    border-radius: 5px;
+  }
+}
+
+
+   div.main2 {
+    width: 1100px;
+    display: flex;
+    flex-flow: row ;
+    margin:auto;
+    gap: 60px;
+    align-items: center;
     
+    
+    
+
+    div.left {
+      flex: 2;
+      
+      
+      p,em {
+        color: darkgrey;
+      }
+      p.green {
+        color: green;
+      }
+      b {
+        display: block;
+        margin-top: 20px;
+      }
+    }
+
+    div.right {
+      
+      flex: 2;
+      
+      
+      img {
+        width: 650px;
+        border-radius: 5px;
+      }
+
+      img:hover {
+        scale: 1.1;
+        
+      }
+      
+    }
+   }
+
+
+
+
+@media (max-width: 1200px) {
+  #margin_right {
+    margin-right: 0;
+  }
+  a.first_logo img {
+    margin-left: 0;
+  }
+
+  div.main2 {
+    width: 900px;
+    
+  }
+
+   div.main2 div.right img {
+    width: 550px
+  }
+}
+
+@media (max-width: 990px) {
+  a.hexagon {
+    display: none;
+  }
+
+  div.main1 {
+    height: 550px;
+  }
+
+  div.main2 {
+    flex-direction: column;
+    width: 700px;
+    
+  }
+
+  div.main2 div.right img {
+    width: 650px;
+  }
+}
+
+@media (max-width: 830px) {
+  div.responsive_part {
+    display: none;
+  }
+
+  a.dropdown {
+    display: block;
+  }
 }
 
 @media (max-width:770px) {
-    div.responsive_part {
-        display: none;
-    }
+  div.main1 {
+    height: 400px;
+  }
+
+  div.main2 {
+    width: auto;
+    margin:auto 10px ;
+  }
+
+  div.main2 div.right  {
+    margin: auto 10px;
+    width: auto;
+    overflow: hidden;
+    
+  }
+
+}
+
+@media (max-width:500px) {
+  div.main2 div.right img {
+    width: 400px;
+  }
 }
